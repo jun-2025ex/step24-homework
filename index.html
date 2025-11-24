@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MVP - ダッシュボード</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="app" class="app-root">
+    <aside class="sidebar">
+      <div class="brand">My Dashboard</div>
+      <nav class="nav">
+        <button class="nav-item" data-route="dashboard" aria-current="true">ダッシュボード</button>
+        <button class="nav-item" data-route="data-register">データ登録</button>
+        <button class="nav-item" data-route="settings">設定</button>
+      </nav>
+      <div class="sidebar-footer">© 2025</div>
+    </aside>
+
+    <main class="main">
+      <header class="main-header">
+        <h1 class="title">ダッシュボード</h1>
+      </header>
+
+      <section id="view-dashboard" class="view">
+        <div class="card-grid">
+          <div class="card">
+            <h2 class="card-title">グラフ A</h2>
+            <div class="chart-wrap"><canvas id="chartA"></canvas></div>
+          </div>
+
+          <div class="card">
+            <h2 class="card-title">グラフ B</h2>
+            <div class="chart-wrap"><canvas id="chartB"></canvas></div>
+          </div>
+
+          <div class="card">
+            <h2 class="card-title">グラフ C</h2>
+            <div class="chart-wrap"><canvas id="chartC"></canvas></div>
+          </div>
+
+          <div class="card">
+            <h2 class="card-title">グラフ D</h2>
+            <div class="chart-wrap"><canvas id="chartD"></canvas></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="view-data-register" class="view hidden">
+        <div class="panel">
+          <h2>データ登録</h2>
+          <form id="data-form" class="data-form">
+            <div class="form-row">
+              <label for="data-label">ラベル</label>
+              <input id="data-label" name="label" type="text" required />
+            </div>
+            <div class="form-row">
+              <label for="data-value">値</label>
+              <input id="data-value" name="value" type="number" step="any" required />
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn">登録</button>
+              <button type="button" id="reset-storage" class="btn btn-ghost">全部消す</button>
+            </div>
+            <p id="form-message" class="form-message" aria-live="polite"></p>
+          </form>
+
+          <div class="stored-list">
+            <h3>現在の保存データ</h3>
+            <ul id="stored-data"></ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="view-settings" class="view hidden">
+        <div class="panel">
+          <h2>設定</h2>
+          <p>ここに将来的な設定を追加します。</p>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
