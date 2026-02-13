@@ -1,0 +1,242 @@
+/* ===== 記録ページ全体 ===== */
+.record-wrapper{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+  height:100%;
+}
+
+
+
+/* ===== タブ ===== */
+.category-tabs{
+  display:flex;
+  gap:10px;
+}
+
+.tab{
+  padding:6px 16px;
+  border-radius:8px;
+  border:1px solid #aaa;
+  background:white;
+  cursor:pointer;
+  transition:0.2s;
+}
+
+.tab:hover{
+  background:#f3f3f3;
+}
+
+.tab.active{
+  background:#e8e8e8;
+  border-color:#888;
+}
+
+
+
+/* ===== 検索エリア ===== */
+.record-toolbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.search-box input{
+  width:320px;
+  padding:8px 12px;
+  border-radius:6px;
+  border:1px solid #ccc;
+  outline:none;
+}
+
+.search-box input:focus{
+  border-color:#888;
+}
+
+
+
+/* ===== ボタン ===== */
+.primary{
+  background:black;
+  color:white;
+  border:none;
+  padding:8px 18px;
+  border-radius:6px;
+  cursor:pointer;
+  transition:0.2s;
+}
+
+.primary:hover{
+  opacity:0.85;
+}
+
+
+
+/* ===== テーブル ===== */
+.record-table{
+  width:100%;
+  border-collapse:collapse;
+  background:white;
+  border-radius:8px;
+  overflow:hidden;
+}
+
+.record-table th{
+  text-align:left;
+  border-bottom:2px solid #ddd;
+  padding:12px 8px;
+  font-size:14px;
+  color:#555;
+}
+
+.record-table td{
+  border-bottom:1px solid #eee;
+  padding:12px 8px;
+  font-size:14px;
+}
+
+.record-table tbody tr:hover{
+  background:#fafafa;
+}
+
+
+
+/* ===== モーダル背景 ===== */
+.modal{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.45);
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  z-index:1000;
+}
+
+/* ===== 本体 ===== */
+.modal-content{
+  width:380px;
+  background:white;
+  border-radius:14px;
+  box-shadow:0 15px 40px rgba(0,0,0,0.2);
+
+  padding:28px;
+
+  animation:modalFade 0.2s ease;
+}
+
+/* ===== ヘッダー ===== */
+.modal-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:20px;
+}
+
+.modal-header h3{
+  margin:0;
+  font-size:18px;
+}
+
+/* ×ボタン */
+.modal-close{
+  border:none;
+  background:none;
+  font-size:22px;
+  cursor:pointer;
+  opacity:0.6;
+}
+
+.modal-close:hover{
+  opacity:1;
+}
+
+
+/* ===== フォーム ===== */
+.modal-form{
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+
+.modal.hidden{
+  display:none;
+}
+
+/* 入力グループ */
+.form-group{
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+}
+
+.form-group label{
+  font-size:13px;
+  color:#666;
+}
+
+
+/* ===== カテゴリ表示 ===== */
+.category-chip{
+  display:inline-block;
+  padding:4px 12px;
+  background:#eee;
+  border-radius:20px;
+  font-size:13px;
+}
+
+
+/* ===== 入力欄 ===== */
+.modal-form input,
+.modal-form textarea{
+  padding:10px 12px;
+  border-radius:8px;
+  border:1px solid #ccc;
+  font-size:14px;
+  outline:none;
+}
+
+.modal-form textarea{
+  resize:none;
+  height:80px;
+}
+
+.modal-form input:focus,
+.modal-form textarea:focus{
+  border-color:black;
+}
+
+
+/* ===== ボタン ===== */
+.modal-buttons{
+  display:flex;
+  justify-content:flex-end;
+  gap:10px;
+  margin-top:10px;
+}
+
+.btn-secondary{
+  background:#eee;
+  border:none;
+  padding:8px 16px;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+.btn-secondary:hover{
+  background:#ddd;
+}
+
+
+/* ===== アニメーション ===== */
+@keyframes modalFade{
+  from{
+    opacity:0;
+    transform:translateY(20px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
