@@ -1,42 +1,36 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-<meta charset="UTF-8">
-<title>じぶん管理</title>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>じぶん管理</title>
 
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="record.css">
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-</head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="record.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
 
-<body>
+  <body>
+    <div class="sidebar">
+      <h2 class="logo">じぶん管理</h2>
 
-<!-- sidebar -->
-<div class="sidebar">
+      <nav class="menu">
+        <button class="menu-item active" onclick="navigate('home')">
+          <span class="icon">🏠</span>
+          ホーム
+        </button>
 
-  <h2 class="logo">じぶん管理</h2>
+        <button class="menu-item" onclick="navigate('record')">
+          <span class="icon">📝</span>
+          記録
+        </button>
+      </nav>
+    </div>
 
-  <nav class="menu">
+    <div class="main" id="app"></div>
 
-    <button class="menu-item active" onclick="navigate('home')">
-      <span class="icon">🏠</span>
-      ホーム
-    </button>
-
-    <button class="menu-item" onclick="navigate('record')">
-      <span class="icon">📝</span>
-      記録
-    </button>
-
-  </nav>
-
-</div>
-
-<!-- ここにページを読み込む -->
-<div class="main" id="app"></div>
-
-<script src="app.js"></script>
-</body>
+    <script src="app.js"></script>
+  </body>
 </html>
 
 
