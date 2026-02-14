@@ -1,4 +1,3 @@
-/* ===== 記録ページ全体 ===== */
 .record-wrapper{
   display:flex;
   flex-direction:column;
@@ -6,9 +5,6 @@
   height:100%;
 }
 
-
-
-/* ===== タブ ===== */
 .category-tabs{
   display:flex;
   gap:10px;
@@ -32,9 +28,6 @@
   border-color:#888;
 }
 
-
-
-/* ===== 検索エリア ===== */
 .record-toolbar{
   display:flex;
   justify-content:space-between;
@@ -53,9 +46,6 @@
   border-color:#888;
 }
 
-
-
-/* ===== ボタン ===== */
 .primary{
   background:black;
   color:white;
@@ -70,9 +60,6 @@
   opacity:0.85;
 }
 
-
-
-/* ===== テーブル ===== */
 .record-table{
   width:100%;
   border-collapse:collapse;
@@ -99,9 +86,6 @@
   background:#fafafa;
 }
 
-
-
-/* ===== モーダル背景 ===== */
 .modal{
   position:fixed;
   inset:0;
@@ -114,7 +98,6 @@
   z-index:1000;
 }
 
-/* ===== 本体 ===== */
 .modal-content{
   width:380px;
   background:white;
@@ -126,7 +109,6 @@
   animation:modalFade 0.2s ease;
 }
 
-/* ===== ヘッダー ===== */
 .modal-header{
   display:flex;
   justify-content:space-between;
@@ -139,7 +121,6 @@
   font-size:18px;
 }
 
-/* ×ボタン */
 .modal-close{
   border:none;
   background:none;
@@ -152,8 +133,6 @@
   opacity:1;
 }
 
-
-/* ===== フォーム ===== */
 .modal-form{
   display:flex;
   flex-direction:column;
@@ -164,7 +143,6 @@
   display:none;
 }
 
-/* 入力グループ */
 .form-group{
   display:flex;
   flex-direction:column;
@@ -176,8 +154,6 @@
   color:#666;
 }
 
-
-/* ===== カテゴリ表示 ===== */
 .category-chip{
   display:inline-block;
   padding:4px 12px;
@@ -186,8 +162,6 @@
   font-size:13px;
 }
 
-
-/* ===== 入力欄 ===== */
 .modal-form input,
 .modal-form textarea{
   padding:10px 12px;
@@ -207,8 +181,6 @@
   border-color:black;
 }
 
-
-/* ===== ボタン ===== */
 .modal-buttons{
   display:flex;
   justify-content:flex-end;
@@ -228,8 +200,24 @@
   background:#ddd;
 }
 
+.toolbar-buttons{
+  display:flex;
+  gap:10px;
+}
 
-/* ===== アニメーション ===== */
+.danger{
+  background:#ff4d4f;
+  color:white;
+  border:none;
+  padding:8px 16px;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+.danger:hover{
+  background:#d9363e;
+}
+
 @keyframes modalFade{
   from{
     opacity:0;

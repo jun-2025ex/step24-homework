@@ -1,34 +1,48 @@
-<div class="home-wrapper">
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>じぶん管理</title>
 
-    <h2>ホーム</h2>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
 
-    <div class="grid">
-    <div class="card">
-        <h3>食事カロリー</h3>
-        <div class="chart-container">
-            <canvas id="foodChart"></canvas>
+  <body>
+    <div class="home-wrapper">
+        <h2>ホーム</h2>
+
+        <div class="grid">
+            <div class="card">
+                <h3>食事カロリー</h3>
+                <div class="chart-container">
+                    <canvas id="foodChart"></canvas>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>睡眠時間</h3>
+                <div class="chart-container">
+                    <canvas id="sleepChart"></canvas>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>運動時間</h3>
+                <div class="chart-container">
+                    <canvas id="exerciseChart"></canvas>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>勉強時間</h3>
+                <div class="chart-container">
+                    <canvas id="studyChart"></canvas>
+                </div>
+            </div>
         </div>
     </div>
+  </body>
+</html>
 
-    <div class="card">
-        <h3>睡眠時間</h3>
-        <div class="chart-container">
-            <canvas id="sleepChart"></canvas>
-        </div>
-    </div>
-
-    <div class="card">
-        <h3>運動時間</h3>
-        <div class="chart-container">
-            <canvas id="exerciseChart"></canvas>
-        </div>
-    </div>
-
-    <div class="card">
-        <h3>勉強時間</h3>
-        <div class="chart-container">
-            <canvas id="studyChart"></canvas>
-        </div>
-    </div>
-    </div>
-</div>

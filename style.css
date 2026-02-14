@@ -1,4 +1,3 @@
-/* ----- 画面全体 ----- */
 html, body{
   height:100%;
   margin:0;
@@ -7,9 +6,9 @@ html, body{
 
 body{
   display:flex;
+  font-family: "Noto Sans JP", sans-serif;
 }
 
-/* ----- sidebar ----- */
 .sidebar{
   width:220px;
   background:#cfdde2;
@@ -19,19 +18,12 @@ body{
   box-sizing:border-box;
 }
 
-/* ロゴ */
-.logo{
-  margin-bottom:30px;
-}
-
-/* メニュー全体 */
 .menu{
   display:flex;
   flex-direction:column;
   gap:8px;
 }
 
-/* 各メニュー項目 */
 .menu-item{
   display:flex;
   align-items:center;
@@ -48,25 +40,16 @@ body{
   transition:0.2s;
 }
 
-/* アイコン */
-.icon{
-  font-size:18px;
-}
-
-/* ホバー */
 .menu-item:hover{
   background:#e6eef1;
 }
 
-/* アクティブ */
 .menu-item.active{
   background:white;
   font-weight:bold;
   box-shadow:0 2px 6px rgba(0,0,0,0.1);
 }
 
-
-/* ----- サイドバー ----- */
 .sidebar{
   width:200px;
   background:#cfdde2;
@@ -75,7 +58,6 @@ body{
   box-sizing:border-box;
 }
 
-/* ----- メイン領域 ----- */
 .main{
   flex:1;
   height:100vh;
@@ -86,7 +68,6 @@ body{
   flex-direction:column;
 }
 
-/* ----- Home wrapper ----- */
 .home-wrapper{
   flex:1;
   display:flex;
@@ -94,7 +75,6 @@ body{
   min-height:0;
 }
 
-/* ----- Grid ----- */
 .grid{
   flex:1;
   display:grid;
@@ -106,12 +86,10 @@ body{
   min-height:0;
 }
 
-/* ★ Grid直下の子も縮める（超重要） */
 .grid > *{
   min-height:0;
 }
 
-/* ----- Card ----- */
 .card{
   background:white;
   padding:20px;
@@ -120,10 +98,9 @@ body{
 
   display:flex;
   flex-direction:column;
-  min-height:0;   /* ← これが最大の修正ポイント */
+  min-height:0;
 }
 
-/* ----- Canvas ----- */
 .card canvas{
   flex:1;
   width:100% !important;
@@ -146,8 +123,6 @@ body{
   display:block;
 }
 
-
-/* ----- 見出し ----- */
 h2, h3{
   margin-top:0;
 }
