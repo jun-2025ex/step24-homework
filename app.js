@@ -209,5 +209,48 @@ function closeModal(){
   document.getElementById("modal").classList.add("hidden");
 }
 
+function seedTestData(){
+  const categories = ["food","sleep","exercise","study"];
+  const data = [];
+
+  for(let i=0;i<60;i++){
+
+    const date = new Date();
+    date.setDate(date.getDate() - i);
+    const category =
+      categories[Math.floor(Math.random()*4)];
+    let value = 0;
+
+    if(category === "food"){
+      value = Math.floor(Math.random() * 1501); // 0〜1500
+    }
+
+    if(category === "sleep"){
+      value = Math.floor(Math.random() * 25); // 0〜24
+    }
+
+    if(category === "exercise"){
+      value = Math.floor(Math.random() * 25);
+    }
+
+    if(category === "study"){
+      value = Math.floor(Math.random() * 25);
+    }
+
+    data.push({
+      category,
+      date: date.toISOString().slice(0,10),
+      content: "テストデータ " + i,
+      value
+    });
+  }
+
+  localStorage.setItem("records", JSON.stringify(data));
+
+  renderTable();
+  drawCharts();
+}
+
 // ---------- 初期ページ ----------
 navigate("home");
+seedTestData();
