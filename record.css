@@ -1,71 +1,10 @@
-.record-wrapper{
-  display:flex;
-  flex-direction:column;
-  gap:20px;
-  height:100%;
-}
-
-.category-tabs{
-  display:flex;
-  gap:10px;
-}
-
-.tab{
-  padding:6px 16px;
-  border-radius:8px;
-  border:1px solid #aaa;
-  background:white;
-  cursor:pointer;
-  transition:0.2s;
-}
-
-.tab:hover{
-  background:#f3f3f3;
-}
-
 .tab.active{
-  background:#e8e8e8;
+  background:#DBFFFF;
   border-color:#888;
-}
-
-.record-toolbar{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
-
-.search-box input{
-  width:320px;
-  padding:8px 12px;
-  border-radius:6px;
-  border:1px solid #ccc;
-  outline:none;
-}
-
-.search-box input:focus{
-  border-color:#888;
-}
-
-.primary{
-  background:black;
-  color:white;
-  border:none;
-  padding:8px 18px;
-  border-radius:6px;
-  cursor:pointer;
-  transition:0.2s;
 }
 
 .primary:hover{
   opacity:0.85;
-}
-
-.record-table{
-  width:100%;
-  border-collapse:collapse;
-  background:white;
-  border-radius:8px;
-  overflow:hidden;
 }
 
 .record-table th{
@@ -84,36 +23,6 @@
 
 .record-table tbody tr:hover{
   background:#fafafa;
-}
-
-.modal{
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,0.45);
-
-  display:flex;
-  justify-content:center;
-  align-items:center;
-
-  z-index:1000;
-}
-
-.modal-content{
-  width:380px;
-  background:white;
-  border-radius:14px;
-  box-shadow:0 15px 40px rgba(0,0,0,0.2);
-
-  padding:28px;
-
-  animation:modalFade 0.2s ease;
-}
-
-.modal-header{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  margin-bottom:20px;
 }
 
 .modal-header h3{
@@ -181,37 +90,8 @@
   border-color:black;
 }
 
-.modal-buttons{
-  display:flex;
-  justify-content:flex-end;
-  gap:10px;
-  margin-top:10px;
-}
-
-.btn-secondary{
-  background:#eee;
-  border:none;
-  padding:8px 16px;
-  border-radius:8px;
-  cursor:pointer;
-}
-
 .btn-secondary:hover{
   background:#ddd;
-}
-
-.toolbar-buttons{
-  display:flex;
-  gap:10px;
-}
-
-.danger{
-  background:#ff4d4f;
-  color:white;
-  border:none;
-  padding:8px 16px;
-  border-radius:6px;
-  cursor:pointer;
 }
 
 .danger:hover{

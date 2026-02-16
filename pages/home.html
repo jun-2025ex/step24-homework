@@ -10,35 +10,35 @@
   </head>
 
   <body>
-    <div class="home-wrapper">
-        <h2>ホーム</h2>
+    <div class="record-wrapper flex flex-col gap-5 h-full">
+      <h2 class="text-xl font-bold">ホーム</h2>
 
-        <div class="grid">
-            <div class="card">
-                <h3>食事カロリー</h3>
-                <div class="chart-container">
-                    <canvas id="foodChart"></canvas>
+        <div class="grid flex-1 grid grid-cols-2 grid-rows-2 gap-5 min-h-0">
+            <div class="card bg-white p-5 rounded-[10px] shadow-md flex flex-col min-h-0">
+                <h3 class="font-bold">食事</h3>
+                <div class="chart-container flex-1 relative min-h-0">
+                    <canvas id="foodChart" class="fabsolute inset-0 lex-1 w-full h-full block"></canvas>
                 </div>
             </div>
 
-            <div class="card">
-                <h3>睡眠時間</h3>
-                <div class="chart-container">
-                    <canvas id="sleepChart"></canvas>
+            <div class="card bg-white p-5 rounded-[10px] shadow-md flex flex-col min-h-0">
+                <h3 class="font-bold">睡眠</h3>
+                <div class="chart-container flex-1 relative min-h-0">
+                    <canvas id="sleepChart" class="fabsolute inset-0 lex-1 w-full h-full block"></canvas>
                 </div>
             </div>
 
-            <div class="card">
-                <h3>運動時間</h3>
-                <div class="chart-container">
-                    <canvas id="exerciseChart"></canvas>
+            <div class="card bg-white p-5 rounded-[10px] shadow-md flex flex-col min-h-0">
+                <h3 class="font-bold">運動</h3>
+                <div class="chart-container flex-1 relative min-h-0">
+                    <canvas id="exerciseChart" class="fabsolute inset-0 lex-1 w-full h-full block"></canvas>
                 </div>
             </div>
 
-            <div class="card">
-                <h3>勉強時間</h3>
-                <div class="chart-container">
-                    <canvas id="studyChart"></canvas>
+            <div class="card bg-white p-5 rounded-[10px] shadow-md flex flex-col min-h-0">
+                <h3 class="font-bold">勉強</h3>
+                <div class="chart-container flex-1 relative min-h-0">
+                    <canvas id="studyChart" class="absolute inset-0 flex-1 w-full h-full block"></canvas>
                 </div>
             </div>
         </div>

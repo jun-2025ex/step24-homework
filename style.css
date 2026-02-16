@@ -4,123 +4,26 @@ html, body{
   overflow:hidden;
 }
 
-body{
-  display:flex;
-  font-family: "Noto Sans JP", sans-serif;
-}
-
-.sidebar{
-  width:220px;
-  background:#cfdde2;
-  padding:20px;
-  display:flex;
-  flex-direction:column;
-  box-sizing:border-box;
-}
-
-.menu{
-  display:flex;
-  flex-direction:column;
-  gap:8px;
-}
-
-.menu-item{
-  display:flex;
-  align-items:center;
-  gap:12px;
-
-  padding:12px 14px;
-  border:none;
-  border-radius:8px;
-
-  background:transparent;
-  cursor:pointer;
-  font-size:15px;
-
-  transition:0.2s;
-}
-
 .menu-item:hover{
   background:#e6eef1;
 }
 
 .menu-item.active{
-  background:white;
+  background:#DBFFFF;
   font-weight:bold;
   box-shadow:0 2px 6px rgba(0,0,0,0.1);
 }
 
 .sidebar{
   width:200px;
-  background:#cfdde2;
+  background:#A3E4E4;
   padding:20px;
   height:100vh;
   box-sizing:border-box;
-}
-
-.main{
-  flex:1;
-  height:100vh;
-  padding:30px;
-  box-sizing:border-box;
-  overflow:hidden;
-  display:flex;
-  flex-direction:column;
-}
-
-.home-wrapper{
-  flex:1;
-  display:flex;
-  flex-direction:column;
-  min-height:0;
-}
-
-.grid{
-  flex:1;
-  display:grid;
-
-  grid-template-columns:repeat(2,1fr);
-  grid-template-rows:repeat(2, minmax(0,1fr));
-
-  gap:20px;
-  min-height:0;
 }
 
 .grid > *{
   min-height:0;
-}
-
-.card{
-  background:white;
-  padding:20px;
-  border-radius:10px;
-  box-shadow:0 2px 6px rgba(0,0,0,0.1);
-
-  display:flex;
-  flex-direction:column;
-  min-height:0;
-}
-
-.card canvas{
-  flex:1;
-  width:100% !important;
-  height:100% !important;
-
-  display:block;
-}
-
-.chart-container{
-  flex:1;
-  position:relative;
-  min-height:0;
-}
-
-.chart-container canvas{
-  position:absolute;
-  inset:0;
-  width:100% !important;
-  height:100% !important;
-  display:block;
 }
 
 h2, h3{
